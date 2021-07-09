@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import BodyTabla from "./BodyTabla";
-import HeadTabla from "./HeadTabla";
+import HeadTabla from './HeadTabla';
+import BodyTabla from './BodyTabla';
 
 class Tabla extends Component {
     render() {
@@ -12,15 +12,6 @@ class Tabla extends Component {
                 <HeadTabla/>
                 <BodyTabla datosPersonas={datosPersonas} eliminarPersona={eliminarPersona} />
             </table>
-        );
-
-        const { personas } = this.state;
-
-        return (
-            <div className="container">
-                <h1>Tutorial de React de Neoguias!</h1>
-                <Tabla datosPersonas={personas} eliminarPersona={this.eliminarPersona} />
-            </div>
         )
     }
 }

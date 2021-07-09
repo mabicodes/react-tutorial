@@ -1,56 +1,25 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Tabla from './Tabla';
+import Form from './Form';
 
-class App extends React.Component {
-    render() {
-
-        const personas = [
-            {
-                nombre: 'Clark',
-                apellido: 'Kent',
-            },
-            {
-                nombre: 'Bruce',
-                apellido: 'Wayne',
-            },
-            {
-                nombre: 'Peter',
-                apellido: 'Parker',
-            },
-            {
-                nombre: 'Selina',
-                apellido: 'Kyle',
-            },
-        ];
-
-        return (
-            <div className="container">
-                <h1>Tutorial de React de Neoguias!</h1>
-                <Tabla datosPersonas={personas} />
-            </div>
-        );
-    }
-
+class App extends Component {
     state = {
         personas: [
             {
-                nombre: 'Clark',
-                apellido: 'Kent',
+                nombre: 'Puto',
+                apellido: 'El k lo lea :v',
             },
             {
-                nombre: 'Bruce',
-                apellido: 'Wayne',
+                nombre: 'Puto',
+                apellido: 'El k lo lea :v',
             },
             {
-                nombre: 'Peter',
-                apellido: 'Parker',
-            },
-            {
-                nombre: 'Selina',
-                apellido: 'Kyle',
+                nombre: 'Puto',
+                apellido: 'El k lo lea :v',
             },
         ],
     }
+
     eliminarPersona = (indice) => {
         const { personas } = this.state
 
@@ -60,6 +29,20 @@ class App extends React.Component {
             }),
         });
     }
-}
+    enviarFormulario = (persona) => {
+        this.setState({ personas: [...this.state.personas, persona] });
+    }
+    render(){
+        const {personas} = this.state;
+        return (
+            <div className="container">
+                <h1>UWUWUWUU uwu uwu Uwu uwu?¿ uwu?</h1>
+                <Tabla datosPersonas={personas} eliminarPersona={this.eliminarPersona} />
+                <Form enviarFormulario={this.enviarFormulario} />
+            </div>
 
+        );
+    }
+
+}
 export default App;
