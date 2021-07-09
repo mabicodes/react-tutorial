@@ -6,16 +6,16 @@ class App extends Component {
     state = {
         personas: [
             {
-                nombre: 'Puto',
-                apellido: 'El k lo lea :v',
+                nombre: 'Whitney',
+                apellido: 'Houston',
             },
             {
-                nombre: 'Puto',
-                apellido: 'El k lo lea :v',
+                nombre: 'Celine',
+                apellido: 'Dion',
             },
             {
-                nombre: 'Puto',
-                apellido: 'El k lo lea :v',
+                nombre: 'Mariah',
+                apellido: 'Carey',
             },
         ],
     }
@@ -36,7 +36,7 @@ class App extends Component {
         const {personas} = this.state;
         return (
             <div className="container">
-                <h1>UWUWUWUU uwu uwu Uwu uwu?¿ uwu?</h1>
+                <h1>Lista de mis cantantes favoritos uwu</h1>
                 <Tabla datosPersonas={personas} eliminarPersona={this.eliminarPersona} />
                 <Form enviarFormulario={this.enviarFormulario} />
             </div>

@@ -34,7 +34,7 @@ class Form extends Component {
                     <input type="text" name="apellido" id="apellido" className="form-control" value={apellido} onChange={this.gestionarCambio} />
                 </div>
                 <div className="form-group">
-                    <input type="button" value="Enviar" onClick={this.enviarFormulario} />
+                    <input type="button" value="Add" onClick={this.enviarFormulario} />
                 </div>
 
 

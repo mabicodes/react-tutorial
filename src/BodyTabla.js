@@ -7,7 +7,7 @@ const BodyTabla = (props) => {
                 <td>{fila.nombre}</td>
                 <td>{fila.apellido}</td>
                 <td>
-                    <button onClick={() => props.eliminarPersona(indice)}>Eliminar</button>
+                    <button onClick={() => props.eliminarPersona(indice)}> X </button>
                 </td>
             </tr>
         )
