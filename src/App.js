@@ -30,5 +30,36 @@ class App extends React.Component {
             </div>
         );
     }
+
+    state = {
+        personas: [
+            {
+                nombre: 'Clark',
+                apellido: 'Kent',
+            },
+            {
+                nombre: 'Bruce',
+                apellido: 'Wayne',
+            },
+            {
+                nombre: 'Peter',
+                apellido: 'Parker',
+            },
+            {
+                nombre: 'Selina',
+                apellido: 'Kyle',
+            },
+        ],
+    }
+    eliminarPersona = (indice) => {
+        const { personas } = this.state
+
+        this.setState({
+            personas: personas.filter((personas, i) => {
+                return i !== indice;
+            }),
+        });
+    }
 }
+
 export default App;
